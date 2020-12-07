@@ -46,13 +46,13 @@ function draw() {
   background("black");
   drawSprites();
   
-  if(score<11){
+  if(score<50){
 	  Level = 1;
   }
-  if(score>11&&score<21){
+  if(score>50&&score<100){
 	  Level = 2;
   }
-  if(score>21){
+  if(score>150){
 	  Level = 3;
   }
   
@@ -89,7 +89,7 @@ function draw() {
 	  text("LEVEL 2",400,50);	
 	  enemyship();
 	  specialenemyship();
-	  //lives = 3
+	  lives = 3
 	}
 
 	if(Level===3){	
@@ -98,7 +98,7 @@ function draw() {
 	  enemyship();
 	  specialenemyship();
 	  asteroidStone();
-	  //lives = 3
+	  lives = 3
 	}
 
 
@@ -123,15 +123,15 @@ function draw() {
 		}
  	}
 
-	if(score === 10){
+	if(score === 50){
 		wowtext();
 		levelupSound.play();
 	}
-	if(score === 20){
+	if(score === 100){
 		wonderfultext();
 		levelupSound.play();
 	}
-	if(score === 30){
+	if(score === 150){
 		awesometext();
 		levelupSound.play();
 	}
